@@ -1,7 +1,12 @@
+"use client";
+import { motion } from "framer-motion";
+
 export default function Button({ text, color }) {
   return (
     <div className="flex flex-col items-center text-center">
-      <button
+      <motion.button
+        whileHover={{ scale: 1.1 }}
+        whileTap={{ scale: 0.9 }}
         className={`uppercase tracking-wider font-bold ${
           color === "primary"
             ? "bg-primary"
@@ -9,7 +14,7 @@ export default function Button({ text, color }) {
         } p-2 border-white rounded-md`}
       >
         {text}
-      </button>
+      </motion.button>
     </div>
   );
 }

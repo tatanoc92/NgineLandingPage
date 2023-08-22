@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Counter from "./components/Counter";
 import Button from "./components/Button";
+import { motion } from "framer-motion";
 
 export default function Home() {
   return (
@@ -17,7 +18,7 @@ export default function Home() {
           quibusdam ad, neque inventore animi velit ipsam tempora placeat dicta
           suscipit aspernatur excepturi.
         </p>
-        <div className="py-8 flex items-center">
+        <div className="py-8 flex items-center gap-4">
           <Counter
             start={0}
             end={50}
@@ -41,13 +42,13 @@ export default function Home() {
           <Button color={"primary"} text={"Become a beta-tester"} />
           <Button color={""} text={"Learn more"} />
         </div>
-        <div className="text-center mt-4">
+        <div className="text-center mt-8">
           <p>Sign up to our newsletter!</p>
           <input type="text" className="input" placeholder="email" />
         </div>
       </div>
       <div className="flex justify-center">
-        <Image src={"/athlete.png"} alt="" width={500} height={500} />
+        <Image src={"/athlete.png"} alt="" width={450} height={450} />
       </div>
     </div>
   );

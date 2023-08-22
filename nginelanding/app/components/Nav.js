@@ -1,5 +1,9 @@
+"use client";
+
 import Link from "next/link";
 import Logo from "./Logo";
+import Button from "./Button";
+import { motion } from "framer-motion";
 
 export default function Nav() {
   const navData = [
@@ -22,7 +26,12 @@ export default function Nav() {
 
   return (
     <nav className="">
-      <div className="bg-slate-800 text-white p-4 flex justify-between">
+      <motion.div
+        initial={{ opacity: 0, scale: 0.5 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.5 }}
+        className="bg-slate-800 text-white p-4 flex justify-between"
+      >
         <div>
           <Logo />
         </div>
@@ -34,8 +43,9 @@ export default function Nav() {
               </Link>
             );
           })}
+          <Button color={"primary"} text={"Become a beta-tester"} />
         </div>
-      </div>
+      </motion.div>
     </nav>
   );
 }
