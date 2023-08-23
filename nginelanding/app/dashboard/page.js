@@ -1,3 +1,12 @@
 export default function DashboardPage() {
-  return <h1>HELLO!</h1>;
+  return (
+    // PAGE 2
+    <div>
+      {/* features */}
+      <div>wef</div>
+
+      {/* feature images */}
+      <div>wef</div>
+    </div>
+  );
 }

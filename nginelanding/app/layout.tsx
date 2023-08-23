@@ -7,8 +7,8 @@ import Footer from "./components/Footer";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "NgineFitness",
-  description: "Take your fitness to the next level!",
+  // title: "NgineFitness",
+  // description: "Take your fitness to the next level!",
 };
 
 export default function RootLayout({
@@ -21,7 +21,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <div className="">
           <Nav />
-          <div className="flex items-center flex-grow text-white">
+          <div className="flex flex-col items-center text-white">
             {children}
           </div>
         </div>

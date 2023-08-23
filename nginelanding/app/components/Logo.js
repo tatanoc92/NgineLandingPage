@@ -5,7 +5,7 @@ export default function Logo() {
   return (
     <Link className="flex items-center" href="/">
       <Image src={"/Logo.png"} width={60} height={60} alt="" />
-      <p>NgineFitness</p>
+      {/* <p>NgineFitness</p> */}
     </Link>
   );
 }
