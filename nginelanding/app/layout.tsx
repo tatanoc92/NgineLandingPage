@@ -1,14 +1,13 @@
 import "./globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import Nav from "./components/Nav";
-import Footer from "./components/Footer";
+import Header from "./components/Header";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  // title: "NgineFitness",
-  // description: "Take your fitness to the next level!",
+  title: "NgineFitness",
+  description: "Take your fitness to the next level!",
 };
 
 export default function RootLayout({
@@ -20,8 +19,8 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <div className="">
-          <Nav />
-          <div className="flex flex-col items-center text-white">
+          <Header />
+          <div className="flex flex-col items-center">
             {children}
           </div>
         </div>
